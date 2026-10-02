@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="de" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATU_RESELL | Exclusive Streetwear & Vintage Apparel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            neon: '#CCFF00', // Electric Lime / Streetwear Neon Accent
+                            dark: '#0B0C10',
+                            card: '#12141A',
+                            border: '#1E222D',
+                            vinted: '#007782',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(204, 255, 0, 0.3);
+        }
+        .glow-vinted {
+            box-shadow: 0 0 25px -5px rgba(0, 119, 130, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-brand-neon selection:text-black">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/80 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="font-display text-2xl sm:text-3xl font-bold tracking-wider text-white group-hover:text-brand-neon transition-colors">
+                    BATU<span class="text-brand-neon">_</span>RESELL
+                </span>
+                <span class="inline-block w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
+            </a>
+
+            <!-- Desktop Nav Items -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#kollektion" class="hover:text-brand-neon transition-colors">Kollektion</a>
+                <a href="#vorteile" class="hover:text-brand-neon transition-colors">Vorteile</a>
+                <a href="#bewertungen" class="hover:text-brand-neon transition-colors">Bewertungen</a>
+                <a href="#faq" class="hover:text-brand-neon transition-colors">FAQ</a>
+                <a href="#kontakt" class="hover:text-brand-neon transition-colors">Kontakt</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://www.vinted.de" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 bg-brand-vinted hover:bg-teal-600 text-white font-medium px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg shadow-teal-900/30">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span>Zu Vinted</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Nav -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 pt-2 pb-6 space-y-4">
+            <a href="#kollektion" class="block text-gray-300 hover:text-brand-neon py-2 border-b border-brand-border/50">Kollektion</a>
+            <a href="#vorteile" class="block text-gray-300 hover:text-brand-neon py-2 border-b border-brand-border/50">Vorteile</a>
+            <a href="#bewertungen" class="block text-gray-300 hover:text-brand-neon py-2 border-b border-brand-border/50">Bewertungen</a>
+            <a href="#faq" class="block text-gray-300 hover:text-brand-neon py-2 border-b border-brand-border/50">FAQ</a>
+            <a href="#kontakt" class="block text-gray-300 hover:text-brand-neon py-2 border-b border-brand-border/50">Kontakt</a>
+            <a href="https://www.vinted.de" target="_blank" rel="noopener noreferrer" 
+               class="flex items-center justify-center gap-2 bg-brand-vinted text-white font-medium px-5 py-3 rounded-xl w-full text-center mt-4">
+                <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                <span>Zu Vinted</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-neon/10 blur-[140px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-brand-vinted/20 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-card border border-brand-border text-xs font-semibold tracking-wider text-brand-neon uppercase">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    Curated Streetwear & Vintage Drops
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-none">
+                    PREMIUM APPAREL & <span class="text-brand-neon underline decoration-wavy decoration-brand-neon/50 underline-offset-8">VINTAGE HEAT</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-gray-400 text-lg sm:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                    Handverlesene Hoodies, Tech-Wear, Jacken, Trackpants & Rare Accessories. Geprüfte Originalware direkt für deinen Style.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://www.vinted.de" target="_blank" rel="noopener noreferrer" 
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-neon text-black font-display font-bold px-8 py-4 rounded-xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 glow-effect">
+                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                        <span>Vinted Profil besuchen</span>
+                    </a>
+                    <a href="#kollektion" 
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-card text-white border border-brand-border font-medium px-8 py-4 rounded-xl hover:bg-brand-border hover:border-gray-500 transition-all duration-300">
+                        <i data-lucide="grid" class="w-5 h-5"></i>
+                        <span>Kollektion entdecken</span>
+                    </a>
+                </div>
+
+                <!-- Social Proof Badges -->
+                <div class="pt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400 border-t border-brand-border/40 max-w-lg mx-auto mt-8">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <span class="font-semibold text-white">5.0 ★ Vinted Rated</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="zap" class="w-4 h-4 text-brand-neon"></i>
+                        <span>Schneller Versand</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-brand-vinted"></i>
+                        <span>100% Authentic</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CATALOG / PRODUCTS SECTION -->
+    <section id="kollektion" class="py-16 bg-brand-card/50 border-y border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                <div>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white flex items-center gap-3">
+                        AKTUELLE DROPS 
+                        <span class="text-xs bg-brand-neon/20 text-brand-neon border border-brand-neon/30 px-2.5 py-1 rounded-md uppercase font-sans">Apparel Only</span>
+                    </h2>
+                    <p class="text-gray-400 mt-2">Klicke auf ein Piece, um direkt zum Angebot auf Vinted zu gelangen.</p>
+                </div>
+
+                <!-- Filter Category Buttons (SNEAKER REMOVED) -->
+                <div class="flex flex-wrap gap-2" id="filter-buttons">
+                    <button data-filter="all" class="filter-btn active bg-brand-neon text-black font-semibold px-4 py-2 rounded-lg text-sm transition-all">Alle</button>
+                    <button data-filter="oberteile" class="filter-btn bg-brand-card border border-brand-border text-gray-300 hover:border-gray-500 font-medium px-4 py-2 rounded-lg text-sm transition-all">Oberteile</button>
+                    <button data-filter="jacken" class="filter-btn bg-brand-card border border-brand-border text-gray-300 hover:border-gray-500 font-medium px-4 py-2 rounded-lg text-sm transition-all">Jacken</button>
+                    <button data-filter="hosen" class="filter-btn bg-brand-card border border-brand-border text-gray-300 hover:border-gray-500 font-medium px-4 py-2 rounded-lg text-sm transition-all">Hosen & Trackpants</button>
+                    <button data-filter="accessoires" class="filter-btn bg-brand-card border border-brand-border text-gray-300 hover:border-gray-500 font-medium px-4 py-2 rounded-lg text-sm transition-all">Accessoires</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="product-grid">
+                
+                <!-- Product Card 1: Hoodie -->
+                <div class="product-item group bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-neon/50 transition-all duration-300 flex flex-col justify-between" data-category="oberteile">
+                    <div class="relative overflow-hidden aspect-square bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=800" 
+                             alt="Heavyweight Hoodie" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/12141A/CCFF00?text=Hoodie+Preview'">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-xs font-semibold px-2.5 py-1 rounded-md text-brand-neon">
+                            Wie neu
+                        </span>
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-xs font-bold px-2.5 py-1 rounded-md text-white">
+                            Gr. L
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Stüssy</span>
+                            <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-brand-neon transition-colors">Heavyweight Boxy Hoodie</h3>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between pt-3 border-t border-brand-border/60">
+                            <span class="font-display text-xl font-bold text-white">85,00 €</span>
+                            <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-1.5 text-xs bg-brand-vinted hover:bg-teal-600 text-white font-medium px-3 py-1.5 rounded-lg transition-colors">
+                                <span>Auf Vinted kaufen</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: Jacket -->
+                <div class="product-item group bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-neon/50 transition-all duration-300 flex flex-col justify-between" data-category="jacken">
+                    <div class="relative overflow-hidden aspect-square bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=800" 
+                             alt="Techwear Shell Jacket" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/12141A/CCFF00?text=Jacket+Preview'">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-xs font-semibold px-2.5 py-1 rounded-md text-brand-neon">
+                            Sehr gut
+                        </span>
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-xs font-bold px-2.5 py-1 rounded-md text-white">
+                            Gr. XL
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Arc'teryx</span>
+                            <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-brand-neon transition-colors">GORE-TEX Waterproof Shell</h3>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between pt-3 border-t border-brand-border/60">
+                            <span class="font-display text-xl font-bold text-white">210,00 €</span>
+                            <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-1.5 text-xs bg-brand-vinted hover:bg-teal-600 text-white font-medium px-3 py-1.5 rounded-lg transition-colors">
+                                <span>Auf Vinted kaufen</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: Pants -->
+                <div class="product-item group bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-neon/50 transition-all duration-300 flex flex-col justify-between" data-category="hosen">
+                    <div class="relative overflow-hidden aspect-square bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&q=80&w=800" 
+                             alt="Carhartt Denim Pants" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/12141A/CCFF00?text=Pants+Preview'">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-xs font-semibold px-2.5 py-1 rounded-md text-brand-neon">
+                            Sehr gut
+                        </span>
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-xs font-bold px-2.5 py-1 rounded-md text-white">
+                            W32 / L32
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Carhartt WIP</span>
+                            <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-brand-neon transition-colors">Double Knee Work Pants</h3>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between pt-3 border-t border-brand-border/60">
+                            <span class="font-display text-xl font-bold text-white">75,00 €</span>
+                            <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-1.5 text-xs bg-brand-vinted hover:bg-teal-600 text-white font-medium px-3 py-1.5 rounded-lg transition-colors">
+                                <span>Auf Vinted kaufen</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4: Trackpants -->
+                <div class="product-item group bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-neon/50 transition-all duration-300 flex flex-col justify-between" data-category="hosen">
+                    <div class="relative overflow-hidden aspect-square bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&q=80&w=800" 
+                             alt="Trackpants" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/12141A/CCFF00?text=Trackpants+Preview'">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-xs font-semibold px-2.5 py-1 rounded-md text-brand-neon">
+                            Wie neu
+                        </span>
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-xs font-bold px-2.5 py-1 rounded-md text-white">
+                            Gr. M
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Nike x Nocta</span>
+                            <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-brand-neon transition-colors">Essential Trackpants Black</h3>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between pt-3 border-t border-brand-border/60">
+                            <span class="font-display text-xl font-bold text-white">90,00 €</span>
+                            <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-1.5 text-xs bg-brand-vinted hover:bg-teal-600 text-white font-medium px-3 py-1.5 rounded-lg transition-colors">
+                                <span>Auf Vinted kaufen</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5: T-Shirt -->
+                <div class="product-item group bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-neon/50 transition-all duration-300 flex flex-col justify-between" data-category="oberteile">
+                    <div class="relative overflow-hidden aspect-square bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=800" 
+                             alt="Graphic Vintage Tee" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/12141A/CCFF00?text=Graphic+Tee+Preview'">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-xs font-semibold px-2.5 py-1 rounded-md text-brand-neon">
+                            Sehr gut
+                        </span>
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-xs font-bold px-2.5 py-1 rounded-md text-white">
+                            Gr. M
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Supreme</span>
+                            <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-brand-neon transition-colors">Box Logo Oversized Tee</h3>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between pt-3 border-t border-brand-border/60">
+                            <span class="font-display text-xl font-bold text-white">60,00 €</span>
+                            <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-1.5 text-xs bg-brand-vinted hover:bg-teal-600 text-white font-medium px-3 py-1.5 rounded-lg transition-colors">
+                                <span>Auf Vinted kaufen</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6: Beanie / Hat -->
+                <div class="product-item group bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-neon/50 transition-all duration-300 flex flex-col justify-between" data-category="accessoires">
+                    <div class="relative overflow-hidden aspect-square bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&q=80&w=800" 
+                             alt="Beanie" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/12141A/CCFF00?text=Beanie+Preview'">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-xs font-semibold px-2.5 py-1 rounded-md text-brand-neon">
+                            Neu mit Etikett
+                        </span>
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-xs font-bold px-2.5 py-1 rounded-md text-white">
+                            OneSize
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Palace</span>
+                            <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-brand-neon transition-colors">Tri-Ferg Logo Beanie Black</h3>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between pt-3 border-t border-brand-border/60">
+                            <span class="font-display text-xl font-bold text-white">40,00 €</span>
+                            <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-1.5 text-xs bg-brand-vinted hover:bg-teal-600 text-white font-medium px-3 py-1.5 rounded-lg transition-colors">
+                                <span>Auf Vinted kaufen</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7: Bag / Crossbody -->
+                <div class="product-item group bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-neon/50 transition-all duration-300 flex flex-col justify-between" data-category="accessoires">
+                    <div class="relative overflow-hidden aspect-square bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800" 
+                             alt="Shoulder Bag" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/12141A/CCFF00?text=Bag+Preview'">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-xs font-semibold px-2.5 py-1 rounded-md text-brand-neon">
+                            Sehr gut
+                        </span>
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-xs font-bold px-2.5 py-1 rounded-md text-white">
+                            OneSize
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Corteiz</span>
+                            <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-brand-neon transition-colors">Bolo Crossbody Shoulder Bag</h3>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between pt-3 border-t border-brand-border/60">
+                            <span class="font-display text-xl font-bold text-white">55,00 €</span>
+                            <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-1.5 text-xs bg-brand-vinted hover:bg-teal-600 text-white font-medium px-3 py-1.5 rounded-lg transition-colors">
+                                <span>Auf Vinted kaufen</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 8: Fleece / Outerwear -->
+                <div class="product-item group bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-neon/50 transition-all duration-300 flex flex-col justify-between" data-category="jacken">
+                    <div class="relative overflow-hidden aspect-square bg-gray-900">
+                        <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&q=80&w=800" 
+                             alt="Fleece Jacket" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x600/12141A/CCFF00?text=Fleece+Preview'">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-xs font-semibold px-2.5 py-1 rounded-md text-brand-neon">
+                            Wie neu
+                        </span>
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-xs font-bold px-2.5 py-1 rounded-md text-white">
+                            Gr. L
+                        </span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Patagonia</span>
+                            <h3 class="font-display font-bold text-lg text-white mt-1 group-hover:text-brand-neon transition-colors">Retro-X Vintage Fleece Zip</h3>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between pt-3 border-t border-brand-border/60">
+                            <span class="font-display text-xl font-bold text-white">110,00 €</span>
+                            <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-1.5 text-xs bg-brand-vinted hover:bg-teal-600 text-white font-medium px-3 py-1.5 rounded-lg transition-colors">
+                                <span>Auf Vinted kaufen</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Link to Vinted Banner -->
+            <div class="mt-12 text-center">
+                <a href="https://www.vinted.de" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-brand-neon transition-colors underline underline-offset-4">
+                    <span>Alle aktuellen Vinted Angebote durchstöbern</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURES / WHY BUY FROM US -->
+    <section id="vorteile" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">WHY BUY FROM <span class="text-brand-neon">BATU_RESELL</span>?</h2>
+                <p class="text-gray-400 mt-3">Zuverlässigkeit, Qualität und schneller Service stehen bei jedem Package an erster Stelle.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-gray-600 transition-all group">
+                    <div class="w-12 h-12 bg-brand-neon/10 border border-brand-neon/20 rounded-xl flex items-center justify-center text-brand-neon mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="truck" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mb-2">Schnell-Versand</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Versand garantiert innerhalb von 24-48 Stunden mit Sendungsverfolgung via DHL oder Hermes.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-gray-600 transition-all group">
+                    <div class="w-12 h-12 bg-brand-neon/10 border border-brand-neon/20 rounded-xl flex items-center justify-center text-brand-neon mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mb-2">100% Originale</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Jedes Kleidungsstück wird vorab gründlich auf Echtheit und Herkunft geprüft. Keine Fakes.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-gray-600 transition-all group">
+                    <div class="w-12 h-12 bg-brand-neon/10 border border-brand-neon/20 rounded-xl flex items-center justify-center text-brand-neon mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mb-2">Top Zustand</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Alle Apparel-Pieces werden gereinigt, gewaschen und gewissenhaft auf Mängel kontrolliert.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border hover:border-gray-600 transition-all group">
+                    <div class="w-12 h-12 bg-brand-neon/10 border border-brand-neon/20 rounded-xl flex items-center justify-center text-brand-neon mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mb-2">Schnelle Antworten</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Fragen zu Maßen, Fits oder Bundlerabatten? Ich antworte im Vinted-Chat innerhalb weniger Minuten!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS / SOCIAL PROOF SECTION -->
+    <section id="bewertungen" class="py-20 bg-brand-card/30 border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="flex items-center justify-center gap-1 text-yellow-400 mb-3">
+                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-yellow-400"></i>
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">VINTED COMMUNITY FEEDBACK</h2>
+                <p class="text-gray-400 mt-2">Echte Bewertungen von zufriedenen Käufern.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Review 1 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-bold text-white">@marvin_s</span>
+                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">
+                            "Der Stüssy Hoodie war super schnell da! Passt perfekt, Zustand genau wie auf den Bildern. Werde safe wieder bestellen."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/50 text-xs text-gray-500 flex justify-between">
+                        <span>Gekauft: Heavyweight Hoodie</span>
+                        <span>vor 3 Tagen</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-bold text-white">@kristina_vt</span>
+                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">
+                            "Mega freundlicher Verkäufer und Blitzversand. Die Arc'teryx Jacke ist 100% original. Absolute Empfehlung!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/50 text-xs text-gray-500 flex justify-between">
+                        <span>Gekauft: Waterproof Shell</span>
+                        <span>vor 1 Woche</span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-bold text-white">@alex_strt</span>
+                            <div class="flex text-yellow-400 text-xs">★★★★★</div>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">
+                            "Paket mit Double Knee Hose und Beanie gekauft. Schneller Rabatt im Chat geklärt – alles top verpackt gewesen."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/50 text-xs text-gray-500 flex justify-between">
+                        <span>Gekauft: Bundlerabatt Paket</span>
+                        <span>vor 2 Wochen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">HÄUFIG GESTELLTE FRAGEN</h2>
+                <p class="text-gray-400 mt-2">Alles, was du vor deinem Kauf wissen musst.</p>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ 1 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-display font-semibold text-lg text-white flex justify-between items-center hover:bg-brand-border/30 transition-colors">
+                        <span>Wie schnell wird meine Bestellung versendet?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-neon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-brand-border/40 pt-4">
+                        Ich versende gekaufte Kleidung innerhalb von 24 bis maximal 48 Stunden nach Zahlungseingang. Die Sendungsnummer erhältst du automatisch direkt im Vinted-Chat.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-display font-semibold text-lg text-white flex justify-between items-center hover:bg-brand-border/30 transition-colors">
+                        <span>Gibt es Paket- / Bundlerabatte bei mehreren Teilen?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-neon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-brand-border/40 pt-4">
+                        Ja, absolut! Wenn du mehrere Artikel (z.B. Hoodie + Hose) gleichzeitig kaufst, erstelle einfach ein Paket auf Vinted. Ich gebe dir gerne einen fairen Rabatt auf den Gesamtpreis und du sparst Versandkosten.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-display font-semibold text-lg text-white flex justify-between items-center hover:bg-brand-border/30 transition-colors">
+                        <span>Welche Bezahlmethoden werden unterstützt?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-neon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-brand-border/40 pt-4">
+                        Der Kauf läuft gewohnt sicher über das Vinted System (Klarna, Paypal, Creditcard oder Vinted-Guthaben).
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-5 text-left font-display font-semibold text-lg text-white flex justify-between items-center hover:bg-brand-border/30 transition-colors">
+                        <span>Sind alle Artikel guaranteed authentic?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-brand-neon transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-brand-border/40 pt-4">
+                        Ja! Sämtliche Streetwear & Vintage Items werden vor dem Einstellen gründlich auf Tags, Nähte und Herkunft kontrolliert.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & CONTACT -->
+    <footer id="kontakt" class="bg-black border-t border-brand-border pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <a href="#" class="font-display text-2xl font-bold tracking-wider text-white">
+                        BATU<span class="text-brand-neon">_</span>RESELL
+                    </a>
+                    <p class="text-gray-400 text-sm max-w-sm leading-relaxed">
+                        Dein Ansprechpartner für curated Second-Hand Streetwear, Heavyweight Hoodies, Vintage Outwear & seltene Apparel-Drops. 
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="https://www.vinted.de" target="_blank" rel="noopener" class="w-10 h-10 bg-brand-card border border-brand-border rounded-lg flex items-center justify-center text-gray-400 hover:text-brand-neon hover:border-brand-neon transition-all" title="Vinted">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="w-10 h-10 bg-brand-card border border-brand-border rounded-lg flex items-center justify-center text-gray-400 hover:text-brand-neon hover:border-brand-neon transition-all" title="Instagram">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-10 h-10 bg-brand-card border border-brand-border rounded-lg flex items-center justify-center text-gray-400 hover:text-brand-neon hover:border-brand-neon transition-all" title="TikTok">
+                            <i data-lucide="video" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-display font-bold text-white mb-4 uppercase text-sm tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#kollektion" class="hover:text-brand-neon transition-colors">Kollektion</a></li>
+                        <li><a href="#vorteile" class="hover:text-brand-neon transition-colors">Vorteile</a></li>
+                        <li><a href="#bewertungen" class="hover:text-brand-neon transition-colors">Bewertungen</a></li>
+                        <li><a href="#faq" class="hover:text-brand-neon transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Direct Contact -->
+                <div>
+                    <h4 class="font-display font-bold text-white mb-4 uppercase text-sm tracking-wider">Kontakt & Support</h4>
+                    <p class="text-sm text-gray-400 mb-3">Fragen zu Maßen, Fits oder Angeboten?</p>
+                    <a href="https://www.vinted.de" target="_blank" class="inline-flex items-center gap-2 text-sm text-brand-neon hover:underline font-semibold">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span>Nachricht auf Vinted</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-border/60 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>&copy; 2026 BATU_RESELL. Alle Rechte vorbehalten. Privatverkauf via Vinted.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-gray-400">Datenschutz</a>
+                    <a href="#" class="hover:text-gray-400">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Category Filtering Logic
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productItems = document.querySelectorAll('.product-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-neon', 'text-black');
+                    b.classList.add('bg-brand-card', 'text-gray-300');
+                });
+
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-brand-neon', 'text-black');
+                btn.classList.remove('bg-brand-card', 'text-gray-300');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                productItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // FAQ Accordion Toggle
+        const faqBtns = document.querySelectorAll('.faq-btn');
+
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('[data-lucide="chevron-down"]');
+                
+                // Toggle current FAQ item
+                const isHidden = content.classList.contains('hidden');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn [data-lucide="chevron-down"]').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
